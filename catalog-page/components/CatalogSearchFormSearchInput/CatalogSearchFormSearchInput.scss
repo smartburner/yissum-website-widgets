@@ -1,0 +1,114 @@
+@import "../../../../../sass/variables";
+
+.react-autosuggest {
+
+  &__container {
+    position: relative;
+    width: 65%;
+
+    @media (max-width: 991px) {
+      width: 55%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__input-group {
+    height: 100%;
+  }
+
+  &__input {
+    color: #8F8E8E;
+    line-height: 1.75;
+    font-weight: 500;
+    padding: 16px !important;
+    width: 100% !important;
+    height: 100%;
+    border: 1px solid $light-grey-2 !important;
+    font-size: 16px;
+    border-radius: 0 !important;
+
+    &:focus {
+      border-color: $blue !important;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer !important;
+    padding: 0;
+
+    &:hover, &:focus, &:focus-within {
+      background-color: transparent;
+    }
+  }
+
+  &__suggestions-container {
+    position: absolute;
+    z-index: 9999;
+    list-style: none;
+    width: 100%;
+    background: #fff;
+    padding: 0;
+
+    &--open {
+      border: 1px solid $light-grey-2;
+    }
+  }
+
+  &__suggestions-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__suggestion {
+
+    padding: 24px 65px 24px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 1px solid $light-grey-2;
+    position: relative;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-image: url('./images/arrow-right-grey.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--highlighted {
+      background-color: $blue;
+      color: #fff;
+
+      &:after {
+        background-image: url('./images/arrow-right-white.svg');
+      }
+    }
+
+  }
+
+}

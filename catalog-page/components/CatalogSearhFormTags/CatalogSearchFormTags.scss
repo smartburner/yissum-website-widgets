@@ -1,0 +1,28 @@
+@import "../../../../../sass/variables";
+
+.catalog-header-tags {
+  display: block;
+
+  &__title {
+    font-size: 18px !important;
+    line-height: 21px !important;
+    padding-bottom: 22px;
+    margin: 0;
+    text-align: center;
+  }
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-y: auto;
+    }
+  }
+
+}

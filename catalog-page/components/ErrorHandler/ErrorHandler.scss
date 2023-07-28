@@ -1,0 +1,36 @@
+@import "../../../../../sass/variables";
+
+.catalog-error {
+
+  padding: 40px 15px;
+  width: 100%;
+
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__image {
+    width: 110px;
+    height: auto;
+  }
+
+  &__message {
+    color: $dark-red;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 26px !important;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 14px;
+    font-family: "Raleway", sans-serif !important;
+  }
+
+  &__caption {
+    color: $dark-grey;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-bottom: 0;
+  }
+}

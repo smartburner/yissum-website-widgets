@@ -1,0 +1,63 @@
+@import "../../../../../sass/variables";
+
+// Search Form
+.catalog-search-form {
+
+  &-main {
+
+    width: 83.333333%;
+    margin: 0 auto;
+
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+
+    @media (max-width: 1249px) {
+      width: 90%;
+    }
+
+    @media (max-width: 1139px) {
+      width: 100%;
+      gap: 15px;
+    }
+  }
+
+  // Clear Button
+  &__clear-btn {
+    width: calc(10% - 30px);
+    color: $blue;
+    background: none;
+    border: none;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: color .2s ease-in-out;
+    padding: 0;
+
+    &:disabled {
+      color: $dark-grey;
+    }
+
+    @media (max-width: 1139px) {
+      width: calc(10% - 15px);
+    }
+
+    @media (max-width: 991px) {
+      width: calc(10% - 15px);
+    }
+
+    @media (max-width: 767px) {
+      width: fit-content;
+    }
+
+    &:hover, &:focus {
+      color: lighten($blue, 5%);
+      background-color: transparent;
+    }
+  }
+}

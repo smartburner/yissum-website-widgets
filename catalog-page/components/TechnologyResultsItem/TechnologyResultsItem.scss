@@ -1,0 +1,240 @@
+@import "../../../../../sass/variables";
+
+.technologies-results-item {
+
+  width: 100%;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-main {
+    flex-basis: 75%;
+
+    @media (max-width: 575px) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    padding: 8px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("./images/technology-header-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: 575px) {
+      padding-left: 16px;
+      padding-right: 16px;
+      gap: 16px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    @media (max-width: 575px) {
+      gap: 18px;
+    }
+  }
+
+  &__id {
+    color: #fff !important;
+    line-height: normal;
+    font-family: "Verdana", sans-serif;
+  }
+
+  &__briefcase-btn {
+    background: #fff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+    color: $headlines;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:before {
+      content: '';
+      width: 28px;
+      height: 25px;
+      background-image: url('./images/suitcase-icon.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      background-size: contain;
+
+      @media (max-width: 350px) {
+        display: none;
+      }
+    }
+
+    &:hover, &:focus {
+      background: lighten($blue, 60%);
+      color: $headlines;
+    }
+  }
+
+
+  &__body {
+    display: flex;
+    border-left: 1px solid $light-grey-3;
+    border-right: 1px solid $light-grey-3;
+    border-bottom: 1px solid $light-grey-3;
+
+    @media (max-width: 575px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    font-size: 20px !important;
+    line-height: 23px !important;
+    font-weight: 600 !important;
+    margin: 0;
+
+    @media (max-width: 575px) {
+      font-size: 18px !important;
+      line-height: 21px !important;
+    }
+
+    &:after {
+      content: '';
+      background-image: url("./images/decor-bar.svg");
+      background-repeat: no-repeat;
+      display: block;
+      width: 74px;
+      height: 7px;
+      margin-top: 20px;
+    }
+  }
+
+  &__excerpt {
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 2;
+
+    @media (max-width: 575px) {
+      line-height: 1.5;
+    }
+
+    &-text {
+      margin-bottom: 0;
+    }
+
+    &-link {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-top: 10px;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background-image: url('./images/arrow-right.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &-main-info {
+    padding: 20px 30px;
+
+    @media (max-width: 575px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &-meta {
+    border-top: 1px solid $light-grey-3;
+    padding: 20px 30px;
+
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 575px) {
+      padding-left: 16px;
+      padding-right: 16px;
+      gap: 0;
+      padding-bottom: 0;
+    }
+
+    &__title, &__values {
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    &__title {
+      font-weight: 600;
+      color: $light-green;
+    }
+
+    &-item {
+      flex-basis: 50%;
+
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__lead-researcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 46px;
+    border-left: 1px solid $light-grey-3;
+    flex-basis: 25%;
+    gap: 15px;
+
+    @media (max-width: 575px) {
+      flex-basis: 100%;
+      border-left: none;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 0;
+      gap: 0;
+    }
+
+    &-title {
+      color: $light-green;
+      font-size: 18px !important;
+      line-height: 21px !important;
+      font-weight: 600 !important;
+      margin: 0;
+
+      @media (max-width: 575px) {
+        font-size: 15px !important;
+        line-height: 2 !important;
+      }
+    }
+
+    &-name {
+      font-size: 18px;
+      line-height: 36px;
+
+      @media (max-width: 575px) {
+        font-size: 15px;
+        line-height: 2;
+      }
+    }
+  }
+}

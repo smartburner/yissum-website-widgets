@@ -1,0 +1,56 @@
+@import "../../../../../sass/variables";
+
+.catalog-header-tags-item {
+  position: relative;
+  user-select: none;
+
+  @media (max-width: 767px) {
+    white-space: nowrap;
+  }
+
+  &__input {
+    // Make input visually hidden
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:disabled + label {
+      background: $dark-grey;
+      color: #fff;
+      border-color: $dark-grey;
+    }
+
+    &:checked + label {
+      background: $blue;
+      color: #fff;
+      border-color: $blue;
+    }
+  }
+
+  &__label {
+    padding: 15px;
+    cursor: pointer !important;
+    background: none;
+    border: 1px solid #8F8E8E;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    font-weight: 500 !important;
+    transition: background-color .2s ease-in-out;
+    color: $text;
+
+    @media (min-width: 576px) {
+      &:hover {
+        background: $blue;
+        color: #fff;
+        border-color: $blue;
+      }
+    }
+  }
+}
